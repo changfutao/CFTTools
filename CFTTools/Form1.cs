@@ -23,6 +23,7 @@ namespace CFTTools
         /// <param name="e"></param>
         private void btnCreateSQLType_Click(object sender, EventArgs e)
         {
+
             //生成前字符串
             string listFrom = txtFrom.Text;
             if (!string.IsNullOrEmpty(listFrom))
