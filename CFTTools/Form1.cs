@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,6 +96,24 @@ namespace CFTTools
                 sbTos.Append(lf+"\r\n");
             }
             txtTo.Text = sbTos.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string txtFromIp=txtFrom.Text;
+            Ping pingSender = new Ping();
+            PingReply reply = pingSender.Send(txtFromIp, 120);//第一个参数为ip地址，第二个参数为ping的时间
+            if (reply.Status == IPStatus.Success)
+            {
+
+                MessageBox.Show("ping通了");
+            }
+            else
+            {
+                MessageBox.Show("ping不通");
+            }
+
+
         }
     }
 }
