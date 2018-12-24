@@ -36,11 +36,13 @@
             this.btnCreateToUpper = new System.Windows.Forms.Button();
             this.btnArrange = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnCreateNumSQL = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateSQLType
             // 
-            this.btnCreateSQLType.Location = new System.Drawing.Point(225, 12);
+            this.btnCreateSQLType.Location = new System.Drawing.Point(225, 52);
             this.btnCreateSQLType.Name = "btnCreateSQLType";
             this.btnCreateSQLType.Size = new System.Drawing.Size(111, 36);
             this.btnCreateSQLType.TabIndex = 2;
@@ -68,7 +70,7 @@
             // 
             // btnCreateDbLink
             // 
-            this.btnCreateDbLink.Location = new System.Drawing.Point(225, 54);
+            this.btnCreateDbLink.Location = new System.Drawing.Point(225, 94);
             this.btnCreateDbLink.Name = "btnCreateDbLink";
             this.btnCreateDbLink.Size = new System.Drawing.Size(111, 36);
             this.btnCreateDbLink.TabIndex = 5;
@@ -78,7 +80,7 @@
             // 
             // btnCreateToUpper
             // 
-            this.btnCreateToUpper.Location = new System.Drawing.Point(225, 96);
+            this.btnCreateToUpper.Location = new System.Drawing.Point(225, 136);
             this.btnCreateToUpper.Name = "btnCreateToUpper";
             this.btnCreateToUpper.Size = new System.Drawing.Size(111, 36);
             this.btnCreateToUpper.TabIndex = 6;
@@ -88,7 +90,7 @@
             // 
             // btnArrange
             // 
-            this.btnArrange.Location = new System.Drawing.Point(225, 138);
+            this.btnArrange.Location = new System.Drawing.Point(225, 178);
             this.btnArrange.Name = "btnArrange";
             this.btnArrange.Size = new System.Drawing.Size(111, 36);
             this.btnArrange.TabIndex = 7;
@@ -98,7 +100,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 180);
+            this.button1.Location = new System.Drawing.Point(225, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 36);
             this.button1.TabIndex = 8;
@@ -106,11 +108,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(225, 12);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(111, 36);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "清空";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnCreateNumSQL
+            // 
+            this.btnCreateNumSQL.Location = new System.Drawing.Point(225, 262);
+            this.btnCreateNumSQL.Name = "btnCreateNumSQL";
+            this.btnCreateNumSQL.Size = new System.Drawing.Size(111, 36);
+            this.btnCreateNumSQL.TabIndex = 10;
+            this.btnCreateNumSQL.Text = "数字生成SQL";
+            this.btnCreateNumSQL.UseVisualStyleBackColor = true;
+            this.btnCreateNumSQL.Click += new System.EventHandler(this.btnCreateNumSQL_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 450);
+            this.Controls.Add(this.btnCreateNumSQL);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnArrange);
             this.Controls.Add(this.btnCreateToUpper);
@@ -135,6 +159,8 @@
         private System.Windows.Forms.Button btnCreateToUpper;
         private System.Windows.Forms.Button btnArrange;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnCreateNumSQL;
     }
 }
 

@@ -115,5 +115,34 @@ namespace CFTTools
 
 
         }
+        /// <summary>
+        /// 清空文本框
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFrom.Text = string.Empty;
+        }
+
+        private void btnCreateNumSQL_Click(object sender, EventArgs e)
+        {
+            //生成前字符串
+            string listFrom = txtFrom.Text;
+            if (!string.IsNullOrEmpty(listFrom))
+            {
+                var strList = listFrom.Split(new char[] { '\r', '\n', ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                StringBuilder sbJoin = new StringBuilder();
+                strList.ForEach(item =>
+                {
+                    sbJoin.Append( item + ",");
+                });
+                txtTo.Text = sbJoin.ToString().Substring(0, sbJoin.ToString().Length - 1);
+            }
+            else
+            {
+                MessageBox.Show("请输入要生成的内容!");
+            }
+        }
     }
 }
